@@ -1,0 +1,110 @@
+.footer {
+  width: 100%;
+
+  margin-bottom: 0;
+  margin-top: auto;
+
+  background-image: url('../img/footer-shape.svg');
+  background-repeat: repeat-x;
+  background-position: center top;
+  background-size: auto;
+
+  padding-top: 65px;
+  padding-bottom: 5px;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include flex-setting(row, space-between, center, wrap);
+
+  position: relative;
+
+  &__rules {
+    width: 150px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+
+    @include flex-setting(column,center,center,nowrap);
+    @include font-setting($primary-font, 0.625em, 1, 900, #072e3a);
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    margin-bottom: 7px;
+  }
+
+  &__copyright {
+    @include font-setting($alternate-font, 0.375em, 1.2, 300, #ffffff);
+    text-align: center;
+    opacity: 0.5;
+
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .footer {
+    padding-top: 65px;
+    padding-bottom: 15px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &__rules {
+      width: 150px;
+      height: 30px;
+      background-color: #ffffff;
+      border-radius: 8px;
+
+      font-size: 0.625em;
+
+      text-decoration: none;
+      text-transform: uppercase;
+
+      margin-bottom: 17px;
+    }
+  }
+
+}
+
+@media only screen and (min-width: $hdm) {
+  .footer {
+    padding-top: 65px;
+    padding-bottom: 15px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &__rules {
+      width: 175px;
+      height: 30px;
+
+      font-size: 0.75em;
+
+      margin-bottom: 17px;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .footer {
+    padding-top: 75px;
+    padding-bottom: 15px;
+
+    padding-left: 40px;
+    padding-right: 40px;
+
+    &__rules {
+      width: 232px;
+      height: 40px;
+
+      font-size: 1em;
+
+      margin-bottom: 11px;
+    }
+  }
+}

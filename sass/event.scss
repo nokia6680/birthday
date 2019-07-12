@@ -1,0 +1,147 @@
+.event {
+  @include flex-setting(column, flex-start, center, nowrap);
+  padding-top: 10px;
+
+  width: 100%;
+
+  &__wrapper {
+    width: 100%;
+    @include flex-setting(column, flex-start, center, nowrap);
+  }
+
+  &__howto {
+    order: 2;
+    @include flex-setting(column, flex-start, center, nowrap);
+  }
+
+  &__pic {
+    order: 1;
+
+    width: 216px;
+    height: 224px;
+
+    background-image: url('../img/bob-round.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+
+  &__title {
+    @include font-setting($primary-font, 1em, 1.2, 900, #ffffff);
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 2px 2px 0 #000000;
+
+    margin-bottom: 0;
+  }
+
+  &__tag {
+    @extend .event__title;
+    color: #ff9ea9;
+    text-decoration: none;
+  }
+
+  &__description {
+    @include font-setting($secondary-font, 0.75em, 1.2, 500, #000000);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 2px;
+      background-color: #ffffff;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .event {
+    padding-top: 20px;
+    margin-bottom: 20px;
+
+    width: 100%;
+
+    &__pic {
+      width: 303px;
+      height: 314px;
+    }
+
+    &__title {
+      @include font-setting($primary-font, 1em, 1.2, 900, #ffffff);
+    }
+
+    &__tag {
+      color: #ff9ea9;
+    }
+
+    &__description {
+      @include font-setting($secondary-font, 0.875em, 1.2, 500, #000000);
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .event {
+    &__pic {
+      width: 433px;
+      height: 449px;
+    }
+
+    &__title {
+      @include font-setting($primary-font, 1.625em, 1.2, 900, #ffffff);
+      margin-bottom: 5px;
+    }
+
+    &__tag {
+      color: #ff9ea9;
+    }
+
+    &__description {
+      @include font-setting($secondary-font, 1.25em, 1.2, 500, #000000);
+
+      &::before {
+        width: 60px;
+        height: 3px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .event {
+    &__pic {
+      width: 341px;
+      height: 354px;
+    }
+
+    &__title {
+      @include font-setting($primary-font, 1.375em, 1.2, 900, #ffffff);
+      margin-bottom: 5px;
+    }
+
+    &__tag {
+      color: #ff9ea9;
+    }
+
+    &__description {
+      @include font-setting($secondary-font, 1em, 1.2, 500, #000000);
+
+      &::before {
+        width: 60px;
+        height: 3px;
+      }
+    }
+  }
+}

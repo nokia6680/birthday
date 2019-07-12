@@ -1,0 +1,183 @@
+.intro {
+  width: 300px;
+
+  background-image: url('../img/wood-frame.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  @include flex-setting(column, center, center, nowrap);
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  margin-bottom: 50px;
+
+  &__wrapper {
+    width: 253px;
+    height: 90px;
+    background-color: #f8e234;
+
+    @include flex-setting(column, center, center, nowrap);
+
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    z-index: -1;
+  }
+
+  &__description {
+    margin: 0;
+
+    @include font-setting($primary-font, 0.625em, 1.2, 400, #000000);
+    text-transform: uppercase;
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 30px;
+        height: 2px;
+        background-color: #ffffff;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .intro {
+    width: 355px;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    margin-bottom: 80px;
+
+    overflow: hidden;
+
+    &__wrapper {
+      width: 295px;
+      height: 110px;
+
+      padding-top: 7px;
+      padding-bottom: 7px;
+      padding-left: 14px;
+      padding-right: 10px;
+    }
+
+    &__description {
+      font-size: 0.75em;
+
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .intro {
+    width: 394px;
+
+    padding-top: 38px;
+    padding-bottom: 33px;
+    padding-left: 33px;
+    padding-right: 33px;
+
+    margin-bottom: 60px;
+
+    overflow: hidden;
+
+    &__wrapper {
+      width: 330px;
+      height: 120px;
+    }
+
+    &__description {
+      font-size: 0.75em;
+
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .intro {
+    width: 672px;
+    height: 326px;
+
+    padding-top: 64px;
+    padding-bottom: 66px;
+    padding-left: 59px;
+    padding-right: 51px;
+
+    margin-bottom: 81px;
+    margin-top: 0px;
+
+    overflow: hidden;
+
+    &__wrapper {
+      width: 562px;
+      height: 196px;
+    }
+
+    &__description {
+      font-size: 1.25em;
+
+      margin-bottom: 20px;
+
+      width: 486px;
+
+      &:last-of-type {
+        &::before {
+          width: 60px;
+          height: 3px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .intro {
+    width: 450px;
+    height: 100%;
+
+    padding-top: 35px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    margin-bottom: 40px;
+
+    overflow: hidden;
+
+    &__wrapper {
+      width: 400px;
+      height: 158px;
+
+      padding-top: 7px;
+      padding-bottom: 7px;
+      padding-left: 14px;
+      padding-right: 10px;
+    }
+
+    &__description {
+      font-size: 0.75em;
+
+      margin-bottom: 20px;
+      width: 340px;
+    }
+  }
+}

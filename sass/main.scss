@@ -1,0 +1,48 @@
+.main {
+  @include flex-setting(column, flex-start, center, nowrap);
+  padding-left: 10px;
+  padding-right: 10px;
+
+  &__down {
+    width: 300px;
+    height: 36px;
+    background-image: url('../img/arrow-down.svg');
+    background-size: 64px 36px;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    margin-bottom: 120px;
+
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .main {
+    &__down {
+      &--first {
+        margin-bottom: 80px;
+      }
+      &--second {
+        margin-bottom: 120px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .main {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+    &__down {
+      &--first {
+        margin-bottom: 40px;
+      }
+      &--second {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
